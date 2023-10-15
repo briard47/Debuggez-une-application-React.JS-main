@@ -5,6 +5,7 @@ import Home from "./index";
 describe("When Form is created", () => {
   it("a list of fields card is displayed", async () => {
     render(<Home />);
+
     await screen.findByText("Email");
     await screen.findByText("Nom");
     await screen.findByText("Prénom");

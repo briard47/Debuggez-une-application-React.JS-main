@@ -12,12 +12,12 @@ import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
-const Page = () => {
+const Home = () => {
   const {data} = useData()
   const byDateDesc = data?.focus.sort((evtA, evtB) =>
     new Date(evtA.date) - new Date(evtB.date))
   const last = byDateDesc?.[byDateDesc.length-1]
-  if (!data) return (<div/>);
+  
   return <>
     <header>
       <Menu />
@@ -161,4 +161,4 @@ const Page = () => {
   </>
 }
 
-export default Page;
+export default Home;
