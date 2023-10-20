@@ -14,7 +14,7 @@ import { useData } from "../../contexts/DataContext";
 
 const Home = () => {
   const {data} = useData()
-  const byDateDesc = data?.focus.sort((evtA, evtB) =>
+  const byDateDesc = data?.events.sort((evtA, evtB) =>
     new Date(evtA.date) - new Date(evtB.date))
   const last = byDateDesc?.[byDateDesc.length-1]
   
